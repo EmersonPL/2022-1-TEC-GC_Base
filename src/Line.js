@@ -1,0 +1,28 @@
+class Line {
+    constructor(startPoint, endPoint, color) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+        this.color = color;
+    }
+
+    getPoints() {
+        return [this.startPoint, this.endPoint];
+    }
+
+    setPoints(startPoint, endPoint) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
+
+    setColor(color) {
+        this.color = color;
+    }
+
+    draw(canvasCtx) {
+        canvasCtx.fillStyle = this.color;
+
+        canvasCtx.moveTo(...this.startPoint.getPosition());
+        canvasCtx.lineTo(...this.endPoint.getPosition());
+        canvasCtx.stroke();
+    }
+}
