@@ -19,10 +19,15 @@ class Line {
     }
 
     draw(canvasCtx) {
-        canvasCtx.fillStyle = this.color;
-
+        canvasCtx.strokeStyle = this.color;
+        
         canvasCtx.moveTo(...this.startPoint.getPosition());
         canvasCtx.lineTo(...this.endPoint.getPosition());
         canvasCtx.stroke();
+    }
+
+    move() {
+        this.startPoint.move();
+        this.endPoint.move();
     }
 }

@@ -47,4 +47,10 @@ class Polygon {
         canvasCtx.fillRect(0, 0, canvasCtx.canvas.width, canvasCtx.canvas.height);
         canvasCtx.restore();
     }
+
+    move() {
+        this.points.forEach(point => {
+            point.move();
+        });
+    }
 }
