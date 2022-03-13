@@ -19,8 +19,9 @@ class Line {
     }
 
     draw(canvasCtx) {
+        canvasCtx.beginPath();
         canvasCtx.strokeStyle = this.color;
-        
+
         canvasCtx.moveTo(...this.startPoint.getPosition());
         canvasCtx.lineTo(...this.endPoint.getPosition());
         canvasCtx.stroke();

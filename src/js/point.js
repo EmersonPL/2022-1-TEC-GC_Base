@@ -1,8 +1,10 @@
 class Point {
-    constructor(x, y, {
-        movement: speed = {'x': 0, 'y': 0},
-        color = "#000000"
-    }) {
+    constructor(x,
+                y,
+                {
+                    speed = {'x': 0, 'y': 0},
+                    color = "#000000"
+                }) {
 
         this.x = x;
         this.y = y;

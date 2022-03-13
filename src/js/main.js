@@ -29,12 +29,6 @@ function render(ctx) {
     drawItems(points, ctx);
     drawItems(lines, ctx);
     drawItems(polygons, ctx);
-
-    // Test
-    ctx.strokeStyle = "#f000ff"
-    ctx.moveTo(10, 10);
-    ctx.lineTo(100, 100);
-    ctx.stroke();
 }
 
 
