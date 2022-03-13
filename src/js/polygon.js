@@ -19,6 +19,14 @@ class Polygon {
         return this.lines;
     }
 
+    getPoints() {
+        return this.points;
+    }
+
+    getColor() {
+        return this.areaColor;
+    }
+
     draw(canvasCtx) {
         this.fill(canvasCtx);
 
