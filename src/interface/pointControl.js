@@ -15,12 +15,13 @@ function setupInnerPoint(point, outerColor, outerSpeed, moveTogether = false, ke
 }
 
 function setInnerPointSpeed(outerSpeed, point, moveTogether) {
-    if (outerSpeed[0] != null) {
+    if (outerSpeed[0] !== 0) {
         return [moveTogether ? outerSpeed[0] + point.getSpeed()[0] : outerSpeed[0],
             moveTogether ? outerSpeed[1] + point.getSpeed()[1] : outerSpeed[1]];
     }
 
-    return [point.getSpeed()[0], point.getSpeed()[1]];
+    return [moveTogether ? point.getSpeed()[0] : 0,
+        moveTogether ? point.getSpeed()[1] : 0];
 }
 
 function setInnerPointColor(outerColor, point, keepPointColor) {
