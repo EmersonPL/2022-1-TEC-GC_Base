@@ -3,10 +3,10 @@ function createPoint(x,
                      color = "#000000",
                      speed = [0, 0]) {
 
-    return new Point(x, y, {
-        color: color,
-        speed: {'x': speed[0], 'y': speed[1]}
-    });
+    return new Point(x,
+        y,
+        color,
+        speed);
 }
 
 function setupInnerPoint(point, outerColor, outerSpeed, moveTogether = false, keepPointColor = false) {
@@ -16,11 +16,11 @@ function setupInnerPoint(point, outerColor, outerSpeed, moveTogether = false, ke
 
 function setInnerPointSpeed(outerSpeed, point, moveTogether) {
     if (outerSpeed[0] != null) {
-        return [moveTogether ? outerSpeed[0] + point.getSpeed()['x'] : outerSpeed[0],
-            moveTogether ? outerSpeed[1] + point.getSpeed()['y'] : outerSpeed[1]];
+        return [moveTogether ? outerSpeed[0] + point.getSpeed()[0] : outerSpeed[0],
+            moveTogether ? outerSpeed[1] + point.getSpeed()[1] : outerSpeed[1]];
     }
 
-    return [point.getSpeed()['x'], point.getSpeed()['y']];
+    return [point.getSpeed()[0], point.getSpeed()[1]];
 }
 
 function setInnerPointColor(outerColor, point, keepPointColor) {

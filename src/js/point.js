@@ -1,10 +1,8 @@
 class Point {
     constructor(x,
                 y,
-                {
-                    speed = {'x': 0, 'y': 0},
-                    color = "#000000"
-                }) {
+                color = "#000000",
+                speed = [0, 0]) {
 
         this.x = x;
         this.y = y;
@@ -36,8 +34,7 @@ class Point {
     }
 
     setSpeed(speed) {
-        this.speed['x'] = speed[0];
-        this.speed['y'] = speed[1];
+        this.speed = speed;
     }
 
     draw(canvasCtx) {
@@ -49,8 +46,8 @@ class Point {
     }
 
     move() {
-        this.x += this.speed['x'];
-        this.y += this.speed['y'];
+        this.x += this.speed[0];
+        this.y += this.speed[1];
     }
 }
 

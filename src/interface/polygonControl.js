@@ -13,5 +13,5 @@ function createPolygon(pointsArr,
         polygonPoints.push(point);
     });
 
-    return new Polygon(polygonPoints, areaColor);
+    return new Polygon(polygonPoints, areaColor, areaSpeed);
 }

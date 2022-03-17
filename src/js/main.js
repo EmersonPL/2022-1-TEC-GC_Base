@@ -10,15 +10,15 @@ function main() {
 
     let ctx = canvas.getContext("2d", {alpha: false});
 
-    setup(ctx);
+    setup(canvas);
 
-    setInterval(render, 100, ctx);
+    setInterval(render, 100, canvas, ctx);
 }
 
 
-function render(ctx) {
+function render(canvas, ctx) {
     // ctx.fillStyle = backGroundColor;
-    setupWindowSize(ctx);
+    setupWindowSize(canvas);
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
@@ -32,13 +32,14 @@ function render(ctx) {
 }
 
 
-function setup(ctx) {
-    setupWindowSize(ctx);
+function setup(canvas) {
+    setupWindowSize(canvas);
+    setupMouseEvents(canvas);
 }
 
-function setupWindowSize(ctx) {
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
+function setupWindowSize(canvas) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 

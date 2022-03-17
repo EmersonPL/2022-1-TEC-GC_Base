@@ -1,18 +1,24 @@
 class Polygon {
-    constructor(points, areaColor) {
+    constructor(points, areaColor, areaSpeed) {
         this.points = points;
         this.areaColor = areaColor;
+        this.areaSpeed = areaSpeed;
         this.lines = this.createLines(this.points);
     }
 
     createLines(points) {
         let lines = [];
         for (let i = 0; i < points.length - 1; i++) {
-            lines.push(new Line(points[i], points[i + 1], this.areaColor));
+            lines.push(createLine(points[i], points[i + 1], this.areaColor, this.areaSpeed));
         }
-        lines.push(new Line(points[points.length - 1], points[0], this.areaColor))
+        lines.push(createLine(points[points.length - 1], points[0], this.areaColor, this.areaSpeed));
 
         return lines;
+    }
+
+    addPoint(point) {
+        this.points.push(point);
+        this.lines = this.createLines(this.points);
     }
 
     getLines() {

@@ -5,7 +5,7 @@ describe('Testing Polygon creation by classes constructor', () => {
 
 
     let points = [p1, p2, p3];
-    let polygon = new Polygon(points, '#000000');
+    let polygon = new Polygon(points, '#000000', [0,0]);
 
     it('Should have the correct Lines', () => {
             let l1 = new Line(p1, p2, '#000000');
