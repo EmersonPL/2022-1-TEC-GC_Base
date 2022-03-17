@@ -1,15 +1,13 @@
 function createLine(startPoint,
                     endPoint,
-                    {
-                        lineColor = null,
-                        lineSpeed = [null, null]
-                    },
+                    lineColor = "#ffffff",
+                    lineSpeed = [0, 0],
                     movePoints = false,
                     keepPointColor = false
 ) {
 
-    startPoint = createPoint(...startPoint);
-    endPoint = createPoint(...endPoint);
+    // startPoint = createPoint(...startPoint);
+    // endPoint = createPoint(...endPoint);
 
     setupInnerPoint(startPoint, lineColor, lineSpeed, movePoints, keepPointColor);
     setupInnerPoint(endPoint, lineColor, lineSpeed, movePoints, keepPointColor);
