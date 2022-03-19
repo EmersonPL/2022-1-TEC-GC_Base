@@ -98,6 +98,8 @@ function getColorPickerValue(colorPickerId) {
 }
 
 function getElementSpeed() {
-    // TODO: add speed selection
-    return [1, 1];
+    let x = document.getElementById("speedX");
+    let y = document.getElementById("speedY");
+
+    return [parseInt(x.value), parseInt(y.value)];
 }

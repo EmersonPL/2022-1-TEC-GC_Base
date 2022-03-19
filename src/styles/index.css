@@ -28,3 +28,20 @@ body {
     left: 75px;
     position: absolute;
 }
+
+.speedControl
+{
+    position: absolute;
+    width: 50px;
+}
+
+#speedX {
+    top: 0px;
+    left: 150px;
+}
+
+#speedY
+{
+    top: 0px;
+    left: 210px;
+}
