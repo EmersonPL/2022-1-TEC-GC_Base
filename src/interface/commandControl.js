@@ -85,8 +85,16 @@ function getMousePosition(evt) {
 
 
 function getElementColor() {
-    // TODO: add color-picker
-    return "#00ffff";
+    return getColorPickerValue("objColor");
+}
+
+function getBgColor() {
+    return getColorPickerValue("bgColor");
+}
+
+function getColorPickerValue(colorPickerId) {
+    let colorPicker = document.getElementById(colorPickerId);
+    return colorPicker.value;
 }
 
 function getElementSpeed() {

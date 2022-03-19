@@ -19,7 +19,7 @@ function main() {
 function render(canvas, ctx) {
     // ctx.fillStyle = backGroundColor;
     setupWindowSize(canvas);
-    ctx.fillStyle = "#000000";
+    ctx.fillStyle = getBgColor();
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     moveItems(points);
