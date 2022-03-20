@@ -22,13 +22,9 @@ function render(canvas, ctx) {
     ctx.fillStyle = getBgColor();
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    moveItems(points);
-    moveItems(lines);
-    moveItems(polygons);
+    moveItems([...points, ...lines, ...polygons]);
 
-    drawItems(points, ctx);
-    drawItems(lines, ctx);
-    drawItems(polygons, ctx);
+    drawItems([...points, ...lines, ...polygons], ctx);
 }
 
 

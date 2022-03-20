@@ -5,8 +5,13 @@ function setupMouseEvents(canvas) {
 }
 
 function checkDrawAction(evt) {
-    // console.log(evt);
-    // if (!evt) console.log("Nothing");
+    let clickedObject = getObjectOnPosition(evt);
+
+    if (clickedObject !== null) {
+        openObjectInfo(clickedObject);
+        return;
+    }
+
     if (evt.shiftKey) {
         polygonPoints = [];
         createCanvasLine(evt);
@@ -79,27 +84,6 @@ function createCanvasPolygon(evt) {
 }
 
 
-function getMousePosition(evt) {
-    return [evt.clientX, evt.clientY];
-}
-
-
-function getElementColor() {
-    return getColorPickerValue("objColor");
-}
-
-function getBgColor() {
-    return getColorPickerValue("bgColor");
-}
-
-function getColorPickerValue(colorPickerId) {
-    let colorPicker = document.getElementById(colorPickerId);
-    return colorPicker.value;
-}
-
-function getElementSpeed() {
-    let x = document.getElementById("speedX");
-    let y = document.getElementById("speedY");
-
-    return [parseInt(x.value), parseInt(y.value)];
+function openObjectInfo(item) {
+    console.log(item);
 }
