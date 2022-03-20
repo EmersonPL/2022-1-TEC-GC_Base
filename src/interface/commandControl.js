@@ -85,11 +85,21 @@ function getMousePosition(evt) {
 
 
 function getElementColor() {
-    // TODO: add color-picker
-    return "#00ffff";
+    return getColorPickerValue("objColor");
+}
+
+function getBgColor() {
+    return getColorPickerValue("bgColor");
+}
+
+function getColorPickerValue(colorPickerId) {
+    let colorPicker = document.getElementById(colorPickerId);
+    return colorPicker.value;
 }
 
 function getElementSpeed() {
-    // TODO: add speed selection
-    return [1, 1];
+    let x = document.getElementById("speedX");
+    let y = document.getElementById("speedY");
+
+    return [parseInt(x.value), parseInt(y.value)];
 }

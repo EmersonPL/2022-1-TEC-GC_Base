@@ -14,3 +14,73 @@ body {
 
     overflow: hidden;
 }
+
+.controlsLabels
+{
+    top: 0;
+    width: 75px;
+    position: absolute;
+    alignment: right;
+    color: lightgray;
+}
+
+.controls
+{
+    top: 25px;
+    width: 75px;
+    position: absolute;
+}
+
+
+.commandsHint
+{
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    color: lightgray;
+}
+
+
+#objColorLabel
+{
+    left: 0;
+}
+
+#objColor
+{
+    left: 0;
+}
+
+
+#bgColorLabel
+{
+    left: 85px;
+}
+
+
+#bgColor
+{
+    left: 85px;
+}
+
+
+#speedXLabel
+{
+    left: 170px;
+}
+
+#speedX
+{
+    left: 170px;
+}
+
+
+#speedYLabel
+{
+    left: 255px;
+}
+
+#speedY
+{
+    left: 255px;
+}
