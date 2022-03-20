@@ -15,33 +15,72 @@ body {
     overflow: hidden;
 }
 
-#objColor
+.controlsLabels
 {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    width: 75px;
+    position: absolute;
+    alignment: right;
+    color: lightgray;
+}
+
+.controls
+{
+    top: 25px;
+    width: 75px;
     position: absolute;
 }
+
+
+.commandsHint
+{
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    color: lightgray;
+}
+
+
+#objColorLabel
+{
+    left: 0;
+}
+
+#objColor
+{
+    left: 0;
+}
+
+
+#bgColorLabel
+{
+    left: 85px;
+}
+
 
 #bgColor
 {
-    top: 0px;
-    left: 75px;
-    position: absolute;
+    left: 85px;
 }
 
-.speedControl
+
+#speedXLabel
 {
-    position: absolute;
-    width: 50px;
+    left: 170px;
 }
 
-#speedX {
-    top: 0px;
-    left: 150px;
+#speedX
+{
+    left: 170px;
+}
+
+
+#speedYLabel
+{
+    left: 255px;
 }
 
 #speedY
 {
-    top: 0px;
-    left: 210px;
+    left: 255px;
 }
