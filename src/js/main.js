@@ -17,8 +17,8 @@ function main() {
 
 
 function render(canvas, ctx) {
-    // ctx.fillStyle = backGroundColor;
     setupWindowSize(canvas);
+    updateSelectedItemInterface();
     ctx.fillStyle = getBgColor();
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
@@ -31,6 +31,8 @@ function render(canvas, ctx) {
 function setup(canvas) {
     setupWindowSize(canvas);
     setupMouseEvents(canvas);
+    // setupColorEvents();
+    setupObjectInfoDivEvents();
 }
 
 function setupWindowSize(canvas) {
