@@ -40,7 +40,6 @@ body {
     color: lightgray;
 }
 
-
 #objColorLabel
 {
     left: 0;
@@ -83,4 +82,35 @@ body {
 #speedY
 {
     left: 255px;
+}
+
+
+.objectInfo
+{
+    right: 10px;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+    visibility: hidden;
+    background: gray;
+    width: 170px;
+}
+
+.objectInfoInput
+{
+    width:50px;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.objectInfoLabel
+{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
 }

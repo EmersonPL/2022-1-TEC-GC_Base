@@ -1,6 +1,6 @@
 function setupMouseEvents(canvas) {
-    canvas.addEventListener('click', (event) => {
-        checkDrawAction(event)
+    canvas.addEventListener('click', (e) => {
+        checkDrawAction(e)
     });
 }
 
@@ -11,6 +11,9 @@ function checkDrawAction(evt) {
         openObjectInfo(clickedObject);
         return;
     }
+
+    selectedItem = null;
+    hideObjectInfo();
 
     if (evt.shiftKey) {
         polygonPoints = [];
@@ -85,5 +88,6 @@ function createCanvasPolygon(evt) {
 
 
 function openObjectInfo(item) {
-    console.log(item);
+    changeObjectInfoValues(item);
+    showObjectInfo();
 }
