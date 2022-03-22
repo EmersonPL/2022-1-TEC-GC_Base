@@ -1,8 +1,28 @@
 function setupMouseEvents(canvas) {
     canvas.addEventListener('click', (e) => {
-        checkDrawAction(e)
+        drag = false;
+
+        checkDrawAction(e);
+    });
+
+    canvas.addEventListener('mousedown', (e) => {
+        selectedItem = getObjectOnPosition(e);
+
+        if (selectedItem === null) return;
+
+        drag = true;
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (selectedItem === null) return;
+
+        if (!drag) return;
+
+        mouseMovePoint(e);
     });
 }
+
+let drag = false;
 
 function checkDrawAction(evt) {
     let clickedObject = getObjectOnPosition(evt);
@@ -90,4 +110,9 @@ function createCanvasPolygon(evt) {
 function openObjectInfo(item) {
     changeObjectInfoValues(item);
     showObjectInfo();
+}
+
+
+function mouseMovePoint(evt) {
+    selectedItem.setPosition(evt.clientX, evt.clientY);
 }
