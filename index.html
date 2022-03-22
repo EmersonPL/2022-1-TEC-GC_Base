@@ -17,8 +17,54 @@
     <script src="src/interface/pointControl.js"></script>
     <script src="src/interface/lineControl.js"></script>
     <script src="src/interface/polygonControl.js"></script>
+    <script src="src/interface/mouseControl.js"></script>
+    <script src="src/interface/utils.js"></script>
+    <script src="src/interface/interfaceControl.js"></script>
 </head>
 
 <body onload="main()">
 <canvas id="canvas" width="500" height="500"></canvas>
+
+<label for="objColor" id="objColorLabel" name="objColorLabel" class="controlsLabels">Object</label>
+<input type="color" id="objColor" name="objColor" class="controls" value="#ffffff">
+
+<label for="bgColor" id="bgColorLabel" name="objColorLabel" class="controlsLabels">Background</label>
+<input type="color" id="bgColor" name="bgColor" class="controls" value="#000000">
+
+<label for="speedX" id="speedXLabel" name="objColorLabel" class="controlsLabels">X-Speed</label>
+<input type="number" id="speedX" name="speed" class="controls" value="0">
+
+<label for="speedY" id="speedYLabel" name="objColorLabel" class="controlsLabels">Y-Speed</label>
+<input type="number" id="speedY" name="speed" class="controls" value="0">
+
+
+<div class="commandsHint">
+    <p>Left-Click: Add Point</p>
+    <p>Shift + Left-Click: Add Line (uses 2 points)</p>
+    <p>CTRL + Left-Click: Add Polygon (uses 3 or more points)</p>
+    <p>Left-Click: Add Point</p>
+</div>
+
+<div id="objectInfo" class="objectInfo">
+    <label for="objectInfoX" class="objectInfoLabel">X: </label>
+    <input type="number" id="objectInfoX" class="objectInfoInput">
+    <br>
+
+    <label for="objectInfoY" class="objectInfoLabel">Y: </label>
+    <input type="number" id="objectInfoY" class="objectInfoInput">
+    <br>
+
+    <label for="objectSpeedInfoX" class="objectInfoLabel">Speed X: </label>
+    <input type="number" id="objectSpeedInfoX" class="objectInfoInput">
+    <br>
+
+    <label for="objectSpeedInfoY" class="objectInfoLabel">Speed Y: </label>
+    <input type="number" id="objectSpeedInfoY" class="objectInfoInput">
+    <br>
+
+    <label for="objectColorInfo" class="objectInfoLabel">Color: </label>
+    <input type="color" id="objectColorInfo" class="objectInfoInput">
+    <br>
+</div>
+
 </body>

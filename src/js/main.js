@@ -10,35 +10,34 @@ function main() {
 
     let ctx = canvas.getContext("2d", {alpha: false});
 
-    setup(ctx);
+    setup(canvas);
 
-    setInterval(render, 100, ctx);
+    setInterval(render, 100, canvas, ctx);
 }
 
 
-function render(ctx) {
-    // ctx.fillStyle = backGroundColor;
-    setupWindowSize(ctx);
-    ctx.fillStyle = "#000000";
+function render(canvas, ctx) {
+    setupWindowSize(canvas);
+    updateSelectedItemInterface();
+    ctx.fillStyle = getBgColor();
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    moveItems(points);
-    moveItems(lines);
-    moveItems(polygons);
+    moveItems([...points, ...lines, ...polygons]);
 
-    drawItems(points, ctx);
-    drawItems(lines, ctx);
-    drawItems(polygons, ctx);
+    drawItems([...points, ...lines, ...polygons], ctx);
 }
 
 
-function setup(ctx) {
-    setupWindowSize(ctx);
+function setup(canvas) {
+    setupWindowSize(canvas);
+    setupMouseEvents(canvas);
+    // setupColorEvents();
+    setupObjectInfoDivEvents();
 }
 
-function setupWindowSize(ctx) {
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
+function setupWindowSize(canvas) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 

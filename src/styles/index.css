@@ -14,3 +14,103 @@ body {
 
     overflow: hidden;
 }
+
+.controlsLabels
+{
+    top: 0;
+    width: 75px;
+    position: absolute;
+    alignment: right;
+    color: lightgray;
+}
+
+.controls
+{
+    top: 25px;
+    width: 75px;
+    position: absolute;
+}
+
+
+.commandsHint
+{
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    color: lightgray;
+}
+
+#objColorLabel
+{
+    left: 0;
+}
+
+#objColor
+{
+    left: 0;
+}
+
+
+#bgColorLabel
+{
+    left: 85px;
+}
+
+
+#bgColor
+{
+    left: 85px;
+}
+
+
+#speedXLabel
+{
+    left: 170px;
+}
+
+#speedX
+{
+    left: 170px;
+}
+
+
+#speedYLabel
+{
+    left: 255px;
+}
+
+#speedY
+{
+    left: 255px;
+}
+
+
+.objectInfo
+{
+    right: 10px;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+    visibility: hidden;
+    background: gray;
+    width: 170px;
+}
+
+.objectInfoInput
+{
+    width:50px;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.objectInfoLabel
+{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}

@@ -1,14 +1,17 @@
-function createPolygon(pointsArr, areaColor = null, areaSpeed = [null, null],
-                       movePoints = false, keepPointsColor = false) {
+function createPolygon(pointsArr,
+                       areaColor = "#ffffff",
+                       areaSpeed = [0, 0],
+                       movePoints = false,
+                       keepPointsColor = false) {
 
     let polygonPoints = [];
     pointsArr.forEach(point => {
-        let p = createPoint(...point);
+        // let p = createPoint(...point);
 
-        setupInnerPoint(p, areaColor, areaSpeed, movePoints, keepPointsColor);
+        setupInnerPoint(point, areaColor, areaSpeed, movePoints, keepPointsColor);
 
-        polygonPoints.push(p);
+        polygonPoints.push(point);
     });
 
-    return new Polygon(polygonPoints, areaColor);
+    return new Polygon(polygonPoints, areaColor, areaSpeed);
 }
